@@ -32,10 +32,10 @@ const TipCalculator = (props) => {
       <Card>
         <CardContent>
           <Typography variant="h5" component="h2">
-            Tip Calculator
+            Calculadora de propinas
           </Typography>
           <TextField
-            label="Total Amount"
+            label="Monto total"
             variant="outlined"
             fullWidth
             type="number"
@@ -45,7 +45,7 @@ const TipCalculator = (props) => {
           />
 
           <TextField
-            label="Tip Percentage"
+            label="Porcentaje de propina"
             variant="outlined"
             fullWidth
             type="number"
@@ -53,23 +53,21 @@ const TipCalculator = (props) => {
             onChange={(e) => handleChangeTipPercentage(e)}
             style={{ margin: '1rem 0' }}
           />
-
           <CardActions>
             <Button variant="contained" onClick={handleCalculate}>
-              Calculate
+              Calcular
             </Button>
             <Button variant='contained' onClick={handleClear}>
-              Clear
+              Limpiar
             </Button>
           </CardActions>
-
           {tipAmount > 0 && totalPayment > 0 && (
             <div style={{ marginTop: '1rem' }}>
               <Typography variant="body1">
-                Tip Amount: ${tipAmount.toFixed(2)}
+                Porcentaje de propina: ${tipAmount.toFixed(2)}
               </Typography>
               <Typography variant="body1">
-                Total Payment: ${totalPayment.toFixed(2)}
+                Total a pagar: ${totalPayment.toFixed(2)}
               </Typography>
             </div>
           )}
