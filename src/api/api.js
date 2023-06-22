@@ -4,6 +4,30 @@ const api = axios.create({
     baseURL: 'https://api.pexels.com/v1/curated',
 });
 
+const auth = axios.create({
+    baseURL: 'http://localhost:8000/',
+});
+
+export const getUsers = async () => {
+    try {
+        const response = await auth.get('users');
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+}
+
+export const registerUser = async (user) => {
+    try {
+        const response = await auth.post('users', user);
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        return {};
+    }
+}
+
 export const getPhotos = async (page, per_page) => {
     try {
         const response = await api.get(`?page=${page}&per_page=${per_page}`, {

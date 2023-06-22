@@ -2,13 +2,14 @@ import { colors } from "@mui/material"
 
 const colorConfigs = {
     sidebar:{
-        background: colors.deepOrange[900],
+        background: colors.blue[900],
         color: "#eeeeee",
-        hoverBg: colors.deepOrange[800],
+        hoverBg: colors.blue[800],
         activeBg: "#1e253a"
     },
-    topbar:{
-        background: colors.red[900],
+    formCard: {
+        background: colors.blue[700],
+        fieldBg: colors.blue[200],
         color: "#eeeeee",
     },
     background: {

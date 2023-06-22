@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "name": "admin",
+      "password": "admin",
+      "email": "admin@email.com",
+      "image_url": ""
+    },
+    {
+      "id": "0e2e6d52-07f3-406a-8afb-36017de386c8",
+      "name": "asdf",
+      "email": "fsd",
+      "password": "asdf@ds",
+      "role": "33221"
+    },
+    {
+      "id": "6db5cdab-fa6e-4dee-aafe-56fbe7c6de85",
+      "name": "asa",
+      "email": "ese",
+      "password": "ees@unet"
+    },
+    {
+      "id": "3be345ba-42dc-4ae6-a5a4-0e260c3e864c",
+      "name": "nuevo",
+      "email": "ese",
+      "password": "nuevo@fdsd"
+    }
+  ],
+  "roles": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
