@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import { Box, Toolbar, useMediaQuery, useTheme } from '@mui/material'
 
 import Sidebar from '../common/Sidebar'
+import Topbar from '../common/Topbar'
 
 import sizeConfigs from '../../configs/sizeConfigs';
 import colorConfigs from '../../configs/colorConfigs';
@@ -16,6 +17,7 @@ const MainLayout = () => {
     return (
         <Box
             sx={{ display: "flex" }}>
+            <Topbar screenSize={screenSize} />
             {!isSmallScreen && <Box
                 component="nav"
                 sx={{

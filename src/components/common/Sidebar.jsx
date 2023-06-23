@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { List, Drawer, Toolbar, Stack, Avatar } from '@mui/material'
 import { ListItemButton, ListItemIcon } from '@mui/material'
+import { Typography } from '@mui/material'
 
 import sizeConfigs from '../../configs/sizeConfigs'
 import colorConfigs from '../../configs/colorConfigs'
@@ -8,6 +9,12 @@ import appRoutes from '../../routes/appRoutes'
 import SidebarItem from './SidebarItem'
 
 const Sidebar = () => {
+
+  const handleLogout = () => {
+    localStorage.removeItem('profile');
+    window.location.reload();
+  }
+
   return (
     <Drawer
       variant="permanent"
@@ -24,8 +31,6 @@ const Sidebar = () => {
       }}
     >
       <List disablePadding sx={{ height: '100%' }}>
-
-
         {appRoutes.map((route, index) => (
           route.sidebarProps ? (
             <SidebarItem item={route} key={index} />
@@ -34,7 +39,7 @@ const Sidebar = () => {
         )
         }
       </List>
-      <ListItemButton sx={{ marginTop: 'auto' }}>Log out</ListItemButton>
+      <ListItemButton sx={{ marginTop: 'auto' }} onClick={handleLogout}>Log out</ListItemButton>
 
     </Drawer>
   )

@@ -3,13 +3,8 @@ import { Link } from 'react-router-dom'
 
 import colorConfigs from '../../configs/colorConfigs'
 import { Typography } from '@mui/material'
-// import { useSelector } from 'react-redux'
-// import { RootState } from '../../redux/store'
 
 const SidebarItem = ({ item }) => {
-
-  //   const { appState } = useSelector((state) => state.appState)
-
   return (
     item.sidebarProps && item.path ? (
       <ListItemButton
@@ -20,7 +15,6 @@ const SidebarItem = ({ item }) => {
             backgroundColor: colorConfigs.sidebar.hoverBg,
           },
           height: "64px",
-          //backgroundColor: appState === props.state ? colorConfigs.sidebar.activeBg : "unset",
           padding: "12px 24px",
         }}
       >

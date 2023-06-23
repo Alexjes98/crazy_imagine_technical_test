@@ -20,6 +20,7 @@ const Register = (props) => {
         })
     }
     //TODO poner un toast de exito de operación
+    //TODO  poner el textField para la URL de la imagen
 
     return (
         <Fragment>

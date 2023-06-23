@@ -51,8 +51,8 @@ const ImageGallery = (props) => {
                     src={photo.src.original}
                     width={photo.width}
                     height={photo.height}
+                    loading="auto"
                     alt={photo.alt}
-                    loading="lazy"
                   />
                 </ImageListItem>
               )

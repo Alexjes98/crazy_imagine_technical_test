@@ -28,6 +28,18 @@ export const registerUser = async (user) => {
     }
 }
 
+export const loginUser = async (user) => {
+    try {
+        const email = user.email;
+        const password = user.password;
+        const response = await auth.get('users',{params: {email, password}});
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        return {};
+    }
+}
+
 export const getPhotos = async (page, per_page) => {
     try {
         const response = await api.get(`?page=${page}&per_page=${per_page}`, {

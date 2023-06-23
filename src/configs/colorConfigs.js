@@ -7,6 +7,10 @@ const colorConfigs = {
         hoverBg: colors.blue[800],
         activeBg: "#1e253a"
     },
+    topbar:{
+        background: colors.blueGrey[900],
+        color: "#eeeeee",
+    },
     formCard: {
         background: colors.blue[700],
         fieldBg: colors.blue[200],
