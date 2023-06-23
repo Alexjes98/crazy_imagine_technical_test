@@ -1,4 +1,14 @@
-import React, { useState } from 'react';
+/*
+    Este componente es responsable de renderizar el menú de navegación de la aplicación.
+    Solo es visible en dispositivos de pantalla pequeña.
+    Cada elemento del menú es un enlace a una ruta de la aplicación.
+    Permitiendo la navegación para dispositivos con pantallas pequeñas.
+    En las que la barra lateral no es visible.
+    Utiliza el vector de rutas de la aplicación para generar los elementos del menú.
+    Se renderiza por medio de un elemento Drawer de Material UI.
+*/
+
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import {
@@ -7,16 +17,10 @@ import {
     ListItemIcon,
     ListItemText,
     MenuList,
-    MenuItem,
-    Typography
+    MenuItem
 } from '@mui/material';
 import {
     Menu as MenuIcon,
-    Calculate as CalculateIcon,
-    AccountCircle as AccountCircleIcon,
-    LibraryBooks as LibraryBooksIcon,
-    PhotoLibrary as PhotoLibraryIcon,
-    Home as HomeIcon,
 } from '@mui/icons-material';
 
 import appRoutes from '../routes/appRoutes'
@@ -32,8 +36,13 @@ const NavigationMenu = () => {
         setMenuOpen(false);
     };
 
+    const handleLogout = () => {
+        localStorage.removeItem('profile');
+        window.location.reload();
+    }
+
     return (
-        <div>
+        <Fragment>
             <IconButton
                 edge="start"
                 color="inherit"
@@ -57,9 +66,10 @@ const NavigationMenu = () => {
                         )
                     })
                     }
+                    <MenuItem sx={{ marginTop: 'auto' }} onClick={handleLogout}>Log out</MenuItem>
                 </MenuList>
             </Drawer>
-        </div>
+        </Fragment>
     );
 };
 

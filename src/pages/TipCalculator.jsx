@@ -1,8 +1,18 @@
+/*
+  Página de calculadora de propinas
+  Utiliza el componente Card de Material UI para mostrar el formulario.
+  Utiliza el componente TextField de Material UI para los campos de entrada.
+  Utiliza el componente Button de Material UI para los botones.
+  Utiliza el hook useState para almacenar los valores de los campos de entrada.
+  Muestra los resultados que se calculan en la función handleCalculate.
+  Maneja un estado para los valores de los campos de entrada.
+  Y se les hace un casting a float para poder realizar las operaciones.
+*/
 import { useState, Fragment } from 'react'
-import { Card, CardActionArea, CardHeader, CardContent, CardActions } from '@mui/material';
+import { Card, CardContent, CardActions } from '@mui/material';
 import { Typography, TextField, Button } from '@mui/material';
 
-const TipCalculator = (props) => {
+const TipCalculator = () => {
 
   const [totalAmountInputValue, setTotalAmountInputValue] = useState('')
   const [tipPercentageInputValue, setTipPercentageInputValue] = useState('')

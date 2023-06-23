@@ -1,14 +1,24 @@
-import CollectionsIcon from '@mui/icons-material/Collections';
+/*
+    Este archivo contiene la configuración de las rutas de la aplicación.
+    Contiene un arreglo de objetos, cada objeto representa una ruta.
+    Cada objeto tiene las siguientes propiedades:
+        - path: la ruta de la página
+        - element: el componente que se va a renderizar
+        - state: el estado de la ruta
+        - topbarProps: las propiedades de la barra superior
+        - sidebarProps: las propiedades de la barra lateral
+*/
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd'
 import CalculateIcon from '@mui/icons-material/Calculate';
-import LoginIcon from '@mui/icons-material/Login';
-import { Home } from '@mui/icons-material';
+import CollectionsIcon from '@mui/icons-material/Collections'
+import LoginIcon from '@mui/icons-material/Login'
+import Home from '@mui/icons-material/Home'
 
-import Dashboard from '../pages/Dashboard';
-import TipCalculator from '../pages/TipCalculator';
-import ImageGallery from '../pages/ImageGallery';
-import Register from '../pages/Register';
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-import Login from '../pages/Login';
+import Dashboard from '../pages/Dashboard'
+import TipCalculator from '../pages/TipCalculator'
+import ImageGallery from '../pages/ImageGallery'
+import Register from '../pages/Register'
+import Login from '../pages/Login'
 
 const appRoutes = [
     {
@@ -33,7 +43,7 @@ const appRoutes = [
         sidebarProps: {
             displayText: "Login",
             icon: <LoginIcon />
-        }        
+        }
     },
     {
         path: "/register",
@@ -61,7 +71,7 @@ const appRoutes = [
     },
     {
         path: "/image_gallery",
-        
+
         element: <ImageGallery />,
         state: "gallery",
         topbarProps: {

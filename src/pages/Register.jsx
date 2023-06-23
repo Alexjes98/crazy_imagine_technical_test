@@ -1,23 +1,35 @@
+/*
+    Esta página contiene el formulario de registro de usuarios
+    y la lógica para registrar un nuevo usuario.
+    El formulario utiliza la librería react-hook-form para validar los campos.
+    Al enviar el formulario se crea un nuevo objeto userDTO con los datos del formulario
+    y se envía a la API para que lo registre.
+    Si el registro es exitoso se muestra un mensaje de éxito.
+    Si el registro falla se muestra un mensaje de error.
+*/
 import { Fragment } from 'react'
-import { TextField, Button} from '@mui/material'
-import { Card, CardHeader, CardContent } from '@mui/material'
+import {
+    Card,
+    CardHeader,
+    CardContent,
+    Button,
+    TextField
+} from '@mui/material'
 import { useForm } from "react-hook-form"
-import { ToastContainer, toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import userDTO from '../dto/userDTO'
 import { generateRandomId } from '../utils/encryption'
 import { registerUser } from '../api/api'
 
-import colorConfigs from '../configs/colorConfigs';
-
 const Register = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         const id = generateRandomId();
-        const newUser = new userDTO({...data, id: id});        
+        const newUser = new userDTO({ ...data, id: id });
         registerUser(newUser).then((data) => {
-            if(Object.keys(data).length === 0) {
+            if (Object.keys(data).length === 0) {
                 return toast.error("Error al registrar usuario");
             }
             toast.success("Usuario registrado con éxito");
@@ -37,7 +49,7 @@ const Register = (props) => {
                             type="text"
                             error={errors.name}
                             {...register("name", { required: true })}
-                            sx={{ margin: '1rem 0'}}
+                            sx={{ margin: '1rem 0' }}
                         />
                         {errors.name && <span>Este campo es requerido</span>}
                         <TextField

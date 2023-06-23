@@ -1,3 +1,7 @@
+/*
+    Este archivo contiene configuraciones de colores para componentes
+    que se utilizan en el proyecto.
+*/
 import { colors } from "@mui/material"
 
 const colorConfigs = {

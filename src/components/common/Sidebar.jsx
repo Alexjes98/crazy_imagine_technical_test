@@ -1,5 +1,5 @@
 import { List, Drawer} from '@mui/material'
-import { ListItemButton, ListItemIcon } from '@mui/material'
+import { ListItemButton} from '@mui/material'
 
 import sizeConfigs from '../../configs/sizeConfigs'
 import colorConfigs from '../../configs/colorConfigs'

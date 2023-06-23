@@ -1,3 +1,11 @@
+/*
+    Este archivo contiene funciones que se utilizan para realizar peticiones a la API
+    Como se llama a la API externa, se utiliza axios para realizar las peticiones.
+    una tiene como base la API de Pexels, y la otra tiene como base la API de usuarios
+    La api de los usuarios se maneja con json-server
+    Tiene funciones para obtener usuarios, registrar usuarios, y loguear usuarios
+    Tiene una función para obtener fotos de la API de Pexels
+*/
 import axios from 'axios';
 
 const api = axios.create({
@@ -44,7 +52,7 @@ export const getPhotos = async (page, per_page) => {
     try {
         const response = await api.get(`?page=${page}&per_page=${per_page}`, {
             headers: {
-                Authorization: 'XntubFls3jSSHAnK6jzsHfKogwc0eqPt5NdYXd1tCQLfodVdUQhGwlit',
+                Authorization: import.meta.env.VITE_PHOTOS_API_KEY
             },
         });
         return response.data;

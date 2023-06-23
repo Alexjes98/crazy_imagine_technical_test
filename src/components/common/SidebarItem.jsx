@@ -1,8 +1,15 @@
-import { ListItemButton, ListItemIcon } from '@mui/material'
+/*
+  Este componente es responsable de renderizar cada elemento del menú lateral.
+  Cada elemento del menú es un enlace a una ruta de la aplicación.
+  tiene aplicado un estilo personalizado para que se muestre de forma vertical
+  y al desplace el cursor sobre el elemento se muestre un color de fondo diferente.
+  uen sus propiedades recibe el objeto item que contiene la información de la ruta
+  a la que enlaza y las propiedades del elemento del menú.
+*/
+import { ListItemButton, ListItemIcon, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 import colorConfigs from '../../configs/colorConfigs'
-import { Typography } from '@mui/material'
 
 const SidebarItem = ({ item }) => {
   return (

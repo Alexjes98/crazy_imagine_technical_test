@@ -1,10 +1,24 @@
+/*
+    Este componente es el encargado de mostrar la barra superior de la aplicación.
+    esta conformado por un AppBar de Material UI en el que se renderiza el nombre del usuario y su avatar.
+    El nombre y el avatar se obtienen del perfil almacenado en el local storage.
+    este tiene un elemento <NavigationMenu> que se encarga de mostrar el menú de navegación.
+    el componente <NavigationMenu> solo se muestra en dispositivos de pantalla pequeña.
+    utiliza la función useMediaQuery de Material UI para determinar si el dispositivo es de pantalla pequeña.
+*/
 import { useEffect, useState } from "react"
-import { AppBar, Avatar, Box, Container, Toolbar, Typography, useMediaQuery, useTheme } from "@mui/material"
+import {
+    AppBar,
+    Avatar,
+    Box,
+    Container,
+    Toolbar,
+    Typography,
+    useMediaQuery,
+    useTheme
+} from "@mui/material"
 
-import Link from '@mui/material/Link';
 import NavigationMenu from "../NavMenu"
-
-import appRoutes from '../../routes/appRoutes'
 
 import sizeConfigs from "../../configs/sizeConfigs"
 import colorConfigs from "../../configs/colorConfigs"
@@ -53,12 +67,10 @@ const Topbar = (props) => {
                             }}>
                             Bienvenido {userName}
                         </Typography>
-
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
                         <Avatar alt="A" src={userAvatar ?? ''} />
                     </Box>
-
                 </Toolbar>
             </Container>
         </AppBar>

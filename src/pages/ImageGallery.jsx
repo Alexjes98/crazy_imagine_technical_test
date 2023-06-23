@@ -1,8 +1,26 @@
+/*
+  Página que muestra una galería de imágenes
+  Utiliza el componente ImageList de Material UI para mostrar las imágenes
+  y el componente Pagination para permitir la navegación entre las páginas de imágenes.
+  el número de columnas de la galería se ajusta de acuerdo al tamaño de la pantalla.
+  utilizando el hook useMediaQuery de Material UI.
+  Las fotos se obtienen de la API de Pexels
+  Un estado local se utiliza para almacenar las fotos obtenidas de la API.
+  El estado local se actualiza cada vez que cambia el número de página.
+*/
 import { useState, Fragment, useEffect } from 'react'
-import { Typography, Box, Pagination, TextField, Button, ImageList, ImageListItem, ImageListItemBar, useMediaQuery, useTheme } from '@mui/material'
+import {
+  Typography,
+  Box,
+  Pagination,
+  ImageList,
+  ImageListItem,
+  useMediaQuery,
+  useTheme
+} from '@mui/material'
 import { getPhotos } from '../api/api'
 
-const ImageGallery = (props) => {
+const ImageGallery = () => {
   const [photos, setPhotos] = useState([])
   const [page, setPage] = useState(1)
   const [limit, setLimit] = useState(20)
