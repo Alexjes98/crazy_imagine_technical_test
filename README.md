@@ -20,6 +20,11 @@ Antes de ejecutar la aplicación, asegúrate de seguir los siguientes pasos de c
     npm install
 ```
 
+3. En caso de no tener instalado Json-server ejecutar el comando
+```shell
+    npm install -g json-server
+```
+
 ## Ejecución 
 
 1. Ejecuta el siguiente comando en una terminal:

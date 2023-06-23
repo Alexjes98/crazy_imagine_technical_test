@@ -84,5 +84,5 @@ const ImageGallery = () => {
     </Fragment>
   )
 }
-
+// PD: debí haber usado Typescript FY Js
 export default ImageGallery
