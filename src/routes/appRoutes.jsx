@@ -12,27 +12,13 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd'
 import CalculateIcon from '@mui/icons-material/Calculate';
 import CollectionsIcon from '@mui/icons-material/Collections'
 import LoginIcon from '@mui/icons-material/Login'
-import Home from '@mui/icons-material/Home'
 
-import Dashboard from '../pages/Dashboard'
 import TipCalculator from '../pages/TipCalculator'
 import ImageGallery from '../pages/ImageGallery'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 
 const appRoutes = [
-    {
-        path: "/",
-        element: <Dashboard />,
-        state: "home",
-        topbarProps: {
-            displayText: "Home",
-        },
-        sidebarProps: {
-            displayText: "Home",
-            icon: <Home />
-        }
-    },
     {
         path: "/login",
         element: <Login />,
