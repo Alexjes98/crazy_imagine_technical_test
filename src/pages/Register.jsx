@@ -1,7 +1,9 @@
 import { Fragment } from 'react'
-import { Typography, Box, Pagination, TextField, Button, ImageList, ImageListItem, ImageListItemBar, useMediaQuery, useTheme } from '@mui/material'
+import { TextField, Button} from '@mui/material'
 import { Card, CardHeader, CardContent } from '@mui/material'
 import { useForm } from "react-hook-form"
+import { ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import userDTO from '../dto/userDTO'
 import { generateRandomId } from '../utils/encryption'
@@ -10,21 +12,21 @@ import { registerUser } from '../api/api'
 import colorConfigs from '../configs/colorConfigs';
 
 const Register = (props) => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         const id = generateRandomId();
-        console.log(id);
-        const newUser = new userDTO(id, data.name, data.lastname, data.email, data.password);
+        const newUser = new userDTO({...data, id: id});        
         registerUser(newUser).then((data) => {
-            console.log(data);
+            if(Object.keys(data).length === 0) {
+                return toast.error("Error al registrar usuario");
+            }
+            toast.success("Usuario registrado con éxito");
         })
     }
-    //TODO poner un toast de exito de operación
-    //TODO  poner el textField para la URL de la imagen
-
     return (
         <Fragment>
-            <Card style={{ }}>
+            <ToastContainer />
+            <Card style={{}}>
                 <CardHeader title="Registrarse" />
                 <CardContent>
                     <form>
@@ -35,7 +37,7 @@ const Register = (props) => {
                             type="text"
                             error={errors.name}
                             {...register("name", { required: true })}
-                            style={{ margin: '1rem 0', color: colorConfigs.formCard.color }}
+                            sx={{ margin: '1rem 0'}}
                         />
                         {errors.name && <span>Este campo es requerido</span>}
                         <TextField
@@ -45,7 +47,7 @@ const Register = (props) => {
                             type="text"
                             error={errors.lastname}
                             {...register("lastname", { required: true })}
-                            style={{ margin: '1rem 0' }}
+                            sx={{ margin: '1rem 0' }}
                         />
                         {errors.lastname && <span>Este campo es requerido</span>}
                         <TextField
@@ -56,7 +58,7 @@ const Register = (props) => {
                             error={errors.email}
                             {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
                             helperText={errors.email?.type === 'pattern' && 'Correo no válido'}
-                            style={{ margin: '1rem 0' }}
+                            sx={{ margin: '1rem 0' }}
                         />
                         {errors.email && <span>Este campo es requerido</span>}
                         <TextField
@@ -67,6 +69,16 @@ const Register = (props) => {
                             error={errors.password}
                             {...register("password", { required: true })}
                             style={{ margin: '1rem 0' }}
+                        />
+                        {errors.password && <span>Este campo es requerido</span>}
+                        <TextField
+                            label="URL de la imagen"
+                            variant="outlined"
+                            fullWidth
+                            type="text"
+                            error={errors.image}
+                            {...register("image_url",)}
+                            sx={{ margin: '1rem 0' }}
                         />
                     </form>
                     <Button onClick={handleSubmit(onSubmit)}>

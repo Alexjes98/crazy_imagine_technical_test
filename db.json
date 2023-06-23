@@ -7,23 +7,67 @@
       "image_url": "https://pbs.twimg.com/profile_images/1594629309192208385/v39O8DTJ_400x400.jpg"
     },
     {
-      "id": "0e2e6d52-07f3-406a-8afb-36017de386c8",
-      "name": "asdf",
-      "email": "fsd",
-      "password": "asdf@ds",
-      "role": "33221"
-    },
-    {
-      "id": "6db5cdab-fa6e-4dee-aafe-56fbe7c6de85",
-      "name": "asa",
-      "email": "ese",
-      "password": "ees@unet"
-    },
-    {
-      "id": "3be345ba-42dc-4ae6-a5a4-0e260c3e864c",
+      "id": "1f35d52c-2fd4-49da-a526-98239189cd18",
       "name": "nuevo",
-      "email": "ese",
-      "password": "nuevo@fdsd"
+      "email": "nuevo",
+      "password": "nuevo@gmail.com",
+      "image_url": "nuevo"
+    },
+    {
+      "id": "ce687af6-10ea-49fe-b290-6c73858ddf6e",
+      "name": "Alejandro",
+      "email": "Lopez",
+      "password": "nuevo@gmail.com",
+      "image_url": "nuevo"
+    },
+    {
+      "id": "19087fc3-b22e-44da-abbc-c142de4f5f04",
+      "name": "Alejandro",
+      "email": "Lopez",
+      "password": "nuevo@gmail.com",
+      "image_url": "nuevo"
+    },
+    {
+      "id": "decfc43d-96f9-4195-88c0-bfc53ed79b1a",
+      "name": "submarino",
+      "email": "sub@gmail.com",
+      "password": "submarino",
+      "image_url": "https://cnnespanol.cnn.com/wp-content/uploads/2023/06/submarino-desaparecio-titanic-titan-e1687346739138.jpg?quality=100&strip=info&w=380&h=215&crop=1"
+    },
+    {
+      "id": "a7da4a24-3b7e-4b42-9cd9-6bbbba85d860",
+      "name": "prueba",
+      "email": "sub@gmail.com",
+      "password": "submarino",
+      "image_url": "dds"
+    },
+    {
+      "id": "d3a4aede-0d0c-4d86-ba1e-acbe6c549ffa",
+      "name": "prueba",
+      "email": "sub@gmail.com",
+      "password": "submarino",
+      "image_url": "dds"
+    },
+    {
+      "id": "bf995cc6-856b-44e6-b627-1b29ef9cd64a",
+      "name": "dsd",
+      "email": "sub@gmail.com",
+      "password": "submarino",
+      "image_url": "dsa"
+    },
+    {
+      "id": "fdde7153-bd3a-448c-8034-0a65e4a5500e",
+      "name": "Alejandro",
+      "email": "sub@gmail.com",
+      "password": "submarino",
+      "image_url": "https://cnnespanol.cnn.com/wp-content/uploads/2023/06/submarino-desaparecio-titanic-titan-e1687346739138.jpg?quality=100&strip=info&w=380&h=215&crop=1"
+    },
+    {
+      "id": "fff0cb64-8c60-442b-8d7a-6ccbbcc1ba33",
+      "name": "Alejandro",
+      "email": "sub@gmail.com",
+      "password": "submarino",
+      "image_url": "https://cnnespanol.cnn.com/wp-content/uploads/2023/06/submarino-desaparecio-titanic-titan-e1687346739138.jpg?quality=100&strip=info&w=380&h=215&crop=1"
     }
   ],
   "roles": [],
